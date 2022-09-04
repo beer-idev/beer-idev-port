@@ -38,12 +38,15 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta property="og:site_name" content="BEER-IDEV" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
+        <link rel="apple-touch-icon" href="https://beer-idev-port.vercel.app/_next/static/media/logo.26df1b6f.png"></link>
+        <link rel="shortcut icon" href="https://beer-idev-port.vercel.app/_next/static/media/logo.26df1b6f.png"></link>
+        <link rel="image_src" type="image/jpeg" href="https://beer-idev-port.vercel.app/_next/static/media/logo.26df1b6f.png"></link>
+        <meta property="og:image" content="https://beer-idev-port.vercel.app/_next/static/media/logo.26df1b6f.png" />
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
         <meta name="twitter:site" content="@beer-idev" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:image" content="https://beer-idev-port.vercel.app/_next/static/media/logo.26df1b6f.png" />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}

@@ -86,12 +86,12 @@ export default function Skill() {
         <div className="w-full md:w-full mx-auto text-center md:text-center lg:p-10 mb-10">
         <motion.div
                 variants={{
-                  hidden: { y: 200, opacity: 0 },
+                  hidden: { y: 50, opacity: 0 },
                   show: { y: 0, opacity: 1 },
                 }}
                 animate={controls}
                 transition={{
-                  delay: 0.03,
+                  delay: 0.01,
                   type: "tween",
                   duration: 0.6,
                 }}
@@ -104,12 +104,12 @@ export default function Skill() {
           </motion.div>
           <motion.div
                variants={{
-                hidden: { y: 200, opacity: 0 },
+                hidden: { y: 50, opacity: 0 },
                   show: { y: 0, opacity: 1 },
               }}
               animate={controls}
               transition={{
-                delay: 0.03,
+                delay: 0.01,
                 type: "tween",
                 duration: 0.6,
               }}

@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
 export default function Skill() {
   const devicons = [
     {
@@ -74,16 +76,45 @@ export default function Skill() {
     },
   ];
   const style = "padding: 500px;"
+  const [element, controls] = useScroll();
   return (
     
-    <div className="container mx-auto px-6 md:px-5 mt-20">
+    <div className="container mx-auto px-6 md:px-5 mt-20" ref={element}>
       <div className="flex flex-row justify-center items-start overflow-hidden">
         {/* Text container */}
 
         <div className="w-full md:w-full mx-auto text-center md:text-center lg:p-10 mb-10">
+        <motion.div
+                variants={{
+                  hidden: { y: 200, opacity: 0 },
+                  show: { y: 0, opacity: 1 },
+                }}
+                animate={controls}
+                transition={{
+                  delay: 0.03,
+                  type: "tween",
+                  duration: 0.6,
+                }}
+                whileInView={{ opacity: 1 }}
+            
+              >
           <p className="text-3xl md:text-4xl font-bold mb-2 text-gray-700 dark:text-gray-200">
             Tech Stack
           </p>
+          </motion.div>
+          <motion.div
+               variants={{
+                hidden: { y: 200, opacity: 0 },
+                  show: { y: 0, opacity: 1 },
+              }}
+              animate={controls}
+              transition={{
+                delay: 0.03,
+                type: "tween",
+                duration: 0.6,
+              }}
+              whileInView={{ opacity: 1 }}
+              >
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 md:px-6 lg:px-10 xl:px-20 justify-items-center">
             {devicons.map((devicon, index) => (
               <div
@@ -91,13 +122,18 @@ export default function Skill() {
                 className="pt-2 w-20 h-20 transition duration-500 hover:xl:scale-105 hover:scale-105 shadow-xl  rounded-xl  dark:shadow-xl relative lg:w-20 lg:h-20 aspect-w-16 aspect-h-9 my-6 md:my-10"
               >
                 {/* className={`rounded-xl dark:bg-zinc-400 hover:bg-gradient-to-r from-indigo-300 to-purple-400 dark:hover:bg-gradient-to-r dark:from-indigo-400 dark:via-purple-400 dark:to-pink-500`} */}
-                  <Image
+                <img
+                    src={devicon.path}
+                    className={`rounded-xl p-3 dark:p-2 hover:shadow-xl  dark:bg-zinc-400 hover:bg-gradient-to-r from-indigo-300 to-purple-400 dark:hover:bg-gradient-to-r dark:from-indigo-400 dark:via-purple-400 dark:to-pink-500`}
+                    alt={devicon.name}
+                  />
+                  {/* <Image
                     src={devicon.path}
                     className={`rounded-xl dark:bg-zinc-400 hover:bg-gradient-to-r from-indigo-300 to-purple-400 dark:hover:bg-gradient-to-r dark:from-indigo-400 dark:via-purple-400 dark:to-pink-500`}
                     layout="fill"
                     alt={devicon.name}
                     objectFit="cover"
-                  />
+                  /> */}
                  <p>
                 
                  </p>
@@ -106,6 +142,7 @@ export default function Skill() {
          
             ))}
           </div>
+          </motion.div>
         </div>
       </div>
       <style>{`

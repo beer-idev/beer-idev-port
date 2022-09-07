@@ -10,30 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   // const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
   // const [isNavOpen, setIsNavOpen] = useState(false);
-  return (
-    <>
- 
-        <div className="sticky top-0 z-10">
-          <div className="bg-white ackdrop-filter backdrop-blur-lg bg-opacity-30 border-b firefox:bg-opacity-90 border-gray-200 px-2 sm:px-4 py-4 rounded dark:bg-black dark:ackdrop-filter dark:backdrop-blur-lg dark:bg-opacity-30 dark:border-b fdark:irefox:bg-opacity-90 dark:border-gray-700">
-            <div className="container flex flex-wrap justify-between items-center mx-auto">
-              <a href="./" className="flex items-center ml-2">
-                {/* <Image
-            src={logo}
-            className="mr-3 h-6 sm:h-9"
-            width={200}
-            height={200}
-            alt="Flowbite Logo"
-          /> */}
-                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                  BEER-IDEV
-                </span>
-              </a>
-
-              <div className="flex md:order-2">
-                {/* Dark mode switcher */}
-                <ThemeSwitch />
-                {/* Dark mode switcher end */}
-
+  {`
                 <button
                   data-collapse-toggle="mobile-menu-4"
                   type="button"
@@ -97,6 +74,70 @@ const Navbar = () => {
                     </svg>
                   )}
                 </button>
+                <div
+        className={
+          isOpen ? "showMenuNav bg-white dark:bg-zinc-900" : "hideMenuNav"
+        }
+      >
+        <div
+          className="absolute top-0 right-0 mx-8 my-8"
+          onClick={() => setIsOpen(false)}
+        >
+          <svg
+            className="h-8 w-8 text-gray-500 dark:text-gray-300"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+        <ul className="flex flex-col items-center justify-between min-h-[250px]">
+          <li
+            className="text-transparent bg-clip-text text-base font-semibold
+                  bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 my-8 uppercase hover:bg-gray-50 border-b border-gray-300 md:border-b md:border-gray-300 md:text-transparent md:bg-clip-text 
+                  md:bg-gradient-to-r md:from-rose-400 md:via-fuchsia-500 md:to-indigo-500 
+                  md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0
+                dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700"
+          >
+            <a href="./">Home</a>
+          </li>
+          {/* <li className="my-8 uppercase text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <a href="/portfolio">Services</a>
+                </li>
+                <li className="my-8 uppercase text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <a href="/contact">Project</a>
+                </li> */}
+        </ul>
+      </div>`}
+  return (
+    <>
+ 
+        <div className="sticky top-0 z-10">
+          <div className="bg-white ackdrop-filter backdrop-blur-lg bg-opacity-30 border-b firefox:bg-opacity-90 border-gray-200 px-2 sm:px-4 py-4 rounded dark:bg-black dark:ackdrop-filter dark:backdrop-blur-lg dark:bg-opacity-30 dark:border-b fdark:irefox:bg-opacity-90 dark:border-gray-700">
+            <div className="container flex flex-wrap justify-between items-center mx-auto">
+              <a href="./" className="flex items-center ml-2">
+                {/* <Image
+            src={logo}
+            className="mr-3 h-6 sm:h-9"
+            width={200}
+            height={200}
+            alt="Flowbite Logo"
+          /> */}
+                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+                  BEER-IDEV
+                </span>
+              </a>
+
+              <div className="flex md:order-2">
+                {/* Dark mode switcher */}
+                <ThemeSwitch />
+                {/* Dark mode switcher end */}
+
               </div>
 
               <div
@@ -145,46 +186,7 @@ const Navbar = () => {
           </div>
         </div>
      
-      <div
-        className={
-          isOpen ? "showMenuNav bg-white dark:bg-zinc-900" : "hideMenuNav"
-        }
-      >
-        <div
-          className="absolute top-0 right-0 mx-8 my-8"
-          onClick={() => setIsOpen(false)}
-        >
-          <svg
-            className="h-8 w-8 text-gray-500 dark:text-gray-300"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </div>
-        <ul className="flex flex-col items-center justify-between min-h-[250px]">
-          <li
-            className="text-transparent bg-clip-text text-base font-semibold
-                  bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 my-8 uppercase hover:bg-gray-50 border-b border-gray-300 md:border-b md:border-gray-300 md:text-transparent md:bg-clip-text 
-                  md:bg-gradient-to-r md:from-rose-400 md:via-fuchsia-500 md:to-indigo-500 
-                  md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0
-                dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700"
-          >
-            <a href="./">Home</a>
-          </li>
-          {/* <li className="my-8 uppercase text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  <a href="/portfolio">Services</a>
-                </li>
-                <li className="my-8 uppercase text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  <a href="/contact">Project</a>
-                </li> */}
-        </ul>
-      </div>
+      
       <style>{`
       .hideMenuNav {
         display: none;
@@ -197,7 +199,7 @@ const Navbar = () => {
         top: 0;
         left: 0;
        
-        z-index: 10;
+        z-index: 30;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

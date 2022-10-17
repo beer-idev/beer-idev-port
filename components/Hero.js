@@ -37,7 +37,7 @@ export default function Hero() {
 
                   <img
                     className="dark:drop-shadow-[0_1px_25px_rgba(217,52,212,0.8)] dark:animate-[wiggle_1s_ease-in-out_infinite] dark:hover:drop-shadow-[0_1px_15px_rgba(255,0,0,0.8)]  md:-translate-y-0.5 lg:-translate-y-0.5 xl:-translate-y-0.5 rounded-full  max-w-full h-auto align-middle border-none"
-                    src="https://beer-idev.com/hero.jpg"
+                    src="https://beer-idev-port.vercel.app/_next/static/media/hero.e66f83ca.jpg"
                     alt="Picture Me"
                   />
                   {/* <Image

@@ -5,12 +5,16 @@ module.exports = {
 },
 module.exports = {
   images: {
-    domains: [
-      'picsum.photos',
-      'flowbite.com',
-      'localhost',
-      'cdn.jsdelivr.net'
-    ],
+    unoptimized: true,
+    loader: 'imgix',
+    path: '',
+    // domains: [
+    //   'picsum.photos',
+    //   'flowbite.com',
+    //   'localhost',
+    //   'cdn.jsdelivr.net',
+    //   'beer-idev-port.vercel.app'
+    // ],
   },
 }
 

@@ -6,16 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next build && next export",
     "lint": "next lint"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
     "framer-motion": "^7.2.1",
+    "js-file-download": "^0.4.12",
     "next": "12.2.5",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "react-intersection-observer": "^9.4.0"
+    "react-intersection-observer": "^9.4.0",
+    "react-simple-typewriter": "^4.0.2",
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",

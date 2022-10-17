@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BiArrowFromBottom } from "react-icons/bi";
+import { FaArrowUp } from "react-icons/fa";
 import { classNames } from './Utility'
 
 export default function BackToTop() {
@@ -37,7 +37,7 @@ export default function BackToTop() {
             'bg-fuchsia-600 hover:bg-fuchsia-00 dark:bg-fuchsia-700 dark:hover:bg-fuchsia-800 focus:ring-fuchsia-500 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none',
           )}
       >
-        <BiArrowFromBottom className="h-6 w-6 md:h-7 md:w-7" aria-hidden="true" />
+        <FaArrowUp className="h-6 w-6 md:h-7 md:w-7" aria-hidden="true" />
       </button>
     </div>
   );

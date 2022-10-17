@@ -6,8 +6,10 @@ import Hero from "../components/Hero";
 import Skill from "../components/Skill";
 import { motion } from "framer-motion";
 import BackToTop from "../components/ScrollToTop";
+import Experience from "../components/Experience";
+
 export default function Home() {
- 
+
   return (
     <>
       <motion.div initial="hidden" animate="show">
@@ -18,8 +20,9 @@ export default function Home() {
         >
           <Hero />
           <Skill />
-        </ContainerBlock>
+ {/* <Experience /> */}
+         </ContainerBlock>
       </motion.div>
-    </>
+    </> 
   );
 }

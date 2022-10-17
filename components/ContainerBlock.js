@@ -18,7 +18,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const meta = {
     title: "Warawut Thasungnoen - Web Developer",
     description: `I've been developing websites for 2+ years straight. Get in touch with me to know more.`,
-    image: Logo,
+    image: "https://beer-idev.com/logo.png",
     type: "website",
     ...customMeta,
   };
@@ -31,6 +31,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
+        <link rel="icon" type="image/png" href={meta.image} />
+
         {/* <meta
         property="og:url"
         content={`https://yourwebsite.com${router.asPath}`}
@@ -55,28 +57,11 @@ export default function ContainerBlock({ children, ...customMeta }) {
       </Head>
 
       <main className="dark:bg-zinc-900 ">
-      <motion.div className="progress-bar dark:progress-bar" style={{ scaleX }} />
-       
+      
+
         <Navbar />
-       
         <div>{children}</div>
         <Footer />
-      
-        <style>
-          {`
-          .progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background:#dc2626;
-  transform-origin: 0%;
-  z-index:11;
-}
-
-`}
-        </style>
       </main>
     </div>
   );

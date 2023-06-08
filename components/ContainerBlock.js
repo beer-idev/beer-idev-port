@@ -54,6 +54,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        <script async src="https://analytics.umami.is/script.js" data-website-id="5b7ef0ca-1596-4a1b-be3a-fbd18f650b3b"></script>
       </Head>
 
       <main className="dark:bg-zinc-900 ">
